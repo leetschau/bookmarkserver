@@ -2,6 +2,7 @@ FROM ubuntu:latest
 
 USER root
 RUN apt-get update -y
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y software-properties-common \
     python3 python3-pip python3-dev libffi-dev
 RUN pip3 install 'buku[server]'
